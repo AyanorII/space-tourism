@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-// TODO: Add media queries
 const Button = styled(NavLink)`
   background: ${(props) => props.theme.colors.light};
   color: ${(props) => props.theme.colors.dark};

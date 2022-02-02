@@ -2,5 +2,6 @@
   "todo-tree.tree.showBadges": true,
   "editor.bracketPairColorization.enabled": true,
   "workbench.colorTheme": "Andromeda Bordered",
-  "workbench.preferredHighContrastColorTheme": "Andromeda Italic Bordered"
+  "workbench.preferredHighContrastColorTheme": "Andromeda Italic Bordered",
+  "todo-tree.tree.showCountsInTree": true
 }

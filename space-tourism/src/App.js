@@ -10,8 +10,8 @@ import {
 import Home from "./pages/Home/Home";
 import Theme from "./styles/Theme";
 import Header from "./components/Header";
+import Destination from "./pages/Destination/Destination";
 
-// TODO: Redirect from /home to /
 function App() {
   return (
     <Theme>
@@ -19,8 +19,9 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/home" element={<Home />} />
           <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/destination" element={<Destination />} />
         </Routes>
       </Router>
     </Theme>

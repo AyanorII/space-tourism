@@ -4,20 +4,16 @@ import bgMobile from "../../assets/home/background-home-mobile.jpg";
 import bgTablet from "../../assets/home/background-home-tablet.jpg";
 import bgDesktop from "../../assets/home/background-home-desktop.jpg";
 import HomeButton from "./HomeButton";
+import Page from "../../components/Page";
 
-// TODO: Use media query to change background image depending on screen size
-const Homepage = styled.div`
-  background: url(${bgMobile}) no-repeat;
-  background-size: cover;
-  height: 100vh;
-  display: grid;
-  place-items: center;
+const background = {
+  mobile: bgMobile,
+  tablet: bgTablet,
+  desktop: bgDesktop,
+}
 
-  @media (min-width: 768px) {
-    background-image: url(${bgTablet});
-  }
+const Homepage = styled(Page)`
   @media (min-width: 1440px) {
-    background-image: url(${bgDesktop});
     grid-template-columns: 1fr 1fr;
   }
 `;
@@ -97,7 +93,7 @@ const Paragraph = styled.p`
 
 function Home() {
   return (
-    <Homepage>
+    <Homepage background={background}>
       <Content>
         <MainHeading>
           So, you want to travel to <BigSpace>space</BigSpace>
@@ -113,5 +109,6 @@ function Home() {
     </Homepage>
   );
 }
+
 
 export default Home;
