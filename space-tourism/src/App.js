@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Redirect
 } from "react-router-dom";
 // Components:
 import Home from "./pages/Home/Home";
@@ -18,7 +19,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Home/>} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </Router>
     </Theme>

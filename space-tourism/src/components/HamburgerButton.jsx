@@ -13,6 +13,10 @@ const Button = styled.button`
   height: 21px;
   position: relative;
   z-index: 1;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 function HamburgerButton(props) {

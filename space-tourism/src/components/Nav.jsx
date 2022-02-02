@@ -19,6 +19,15 @@ const StyledNav = styled.nav`
   grid-template-rows: repeat(4, minmax(50px, 75px));
   align-items: center;
   padding-top: 150px;
+
+  @media (min-width: 768px) {
+    transform: unset;
+    height: 98px;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, auto);
+    padding: 0;
+    width: 70%;
+  }
 `;
 
 const pages = ["home", "destination", "crew", "technology"];

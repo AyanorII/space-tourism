@@ -14,6 +14,10 @@ const StyledHeader = styled.header`
   left: 0;
   right: 0;
   z-index: 1;
+
+  @media (min-width: 768px) {
+    padding: 1.8125rem 2.125rem;
+  }
 `;
 
 function Header() {
