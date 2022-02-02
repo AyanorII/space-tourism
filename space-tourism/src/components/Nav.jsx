@@ -24,9 +24,24 @@ const StyledNav = styled.nav`
     transform: unset;
     height: 98px;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
     padding: 0;
-    width: 70%;
+    width: 65%;
+  }
+
+  @media (min-width: 1440px) {
+    position: relative;
+    width: 60%;
+
+    &::before {
+      content: "";
+      width: 60%;
+      height: 3px;
+      background: #FFFFFF20;
+      position: absolute;
+      left: -55%;
+    }
   }
 `;
 

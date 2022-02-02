@@ -30,6 +30,14 @@ const Button = styled(NavLink)`
       box-shadow: 0px 0 0 50px rgba(217, 217, 217, 0.10);
     }
   }
+
+  @media (min-width: 1440px) {
+    align-self: end;
+    position: relative;
+    padding: 17% 12%;
+    bottom: 150px;
+    left: 90px
+  }
 `;
 
 function HomeButton(props) {

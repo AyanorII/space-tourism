@@ -5,6 +5,11 @@ import src from "../assets/shared/logo.svg";
 const Image = styled.img`
   max-width: 40px;
   height: 40px;
+
+  @media (min-width: 768px) {
+    max-width: 48px;
+    height: 48px;
+  }
 `;
 
 function Logo() {

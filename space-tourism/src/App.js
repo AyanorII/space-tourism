@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Redirect
+  Navigate
 } from "react-router-dom";
 // Components:
 import Home from "./pages/Home/Home";
@@ -19,8 +19,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Navigate to="/home" />} />
         </Routes>
       </Router>
     </Theme>

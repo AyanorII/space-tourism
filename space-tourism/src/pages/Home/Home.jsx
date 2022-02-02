@@ -14,8 +14,11 @@ const Homepage = styled.div`
   place-items: center;
 
   @media (min-width: 768px) {
-    background: url(${bgTablet}) no-repeat;
-    background-size: cover;
+    background-image: url(${bgTablet});
+  }
+  @media (min-width: 1440px) {
+    background-image: url(${bgDesktop});
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
@@ -26,6 +29,13 @@ const Content = styled.div`
 
   @media (min-width: 768px) {
     width: 60%;
+  }
+
+  @media (min-width: 1440px) {
+    align-self: center;
+    position: relative;
+    top: 150px;
+    text-align: left;
   }
 `;
 
@@ -43,6 +53,12 @@ const MainHeading = styled.h1`
     letter-spacing: 3.38px;
     line-height: 24px;
   }
+
+  @media (min-width: 1440px) {
+    font-size: 1.75rem;
+    letter-spacing: 4.72px;
+    line-height: 33px;
+  }
 `;
 
 const BigSpace = styled.span`
@@ -57,6 +73,10 @@ const BigSpace = styled.span`
     font-size: 9.375rem;
     line-height: 9.375rem;
   }
+
+  @media (min-width: 768px) {
+    line-height: 10.75rem;
+  }
 `;
 
 const Paragraph = styled.p`
@@ -68,6 +88,11 @@ const Paragraph = styled.p`
   color: ${(props) => props.theme.colors.main};
   margin-top: 1rem;
   opacity: 0.8;
+
+  @media (min-width: 1440px) {
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
 `;
 
 function Home() {

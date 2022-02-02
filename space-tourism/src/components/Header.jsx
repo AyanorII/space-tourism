@@ -18,6 +18,12 @@ const StyledHeader = styled.header`
   @media (min-width: 768px) {
     padding: 1.8125rem 2.125rem;
   }
+
+  @media (min-width: 1440px) {
+    padding-inline: 3.4375rem 0;
+    padding-bottom: 0;
+    top: 10px;
+  }
 `;
 
 function Header() {
