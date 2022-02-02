@@ -16,6 +16,13 @@ const Button = styled(NavLink)`
   border: none;
   outline: none;
 
+  @media (min-width: 768px) {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    line-height: 36px;
+    padding: 6.25rem 2.5rem;
+  }
+
   @media (min-width: 1200px) {
     transition: box-shadow 0.3s;
 

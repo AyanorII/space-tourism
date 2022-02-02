@@ -12,15 +12,23 @@ const Homepage = styled.div`
   height: 100vh;
   display: grid;
   place-items: center;
+
+  @media (min-width: 768px) {
+    background: url(${bgTablet}) no-repeat;
+    background-size: cover;
+  }
 `;
 
 const Content = styled.div`
   text-align: center;
   width: 85%;
   align-self: end;
+
+  @media (min-width: 768px) {
+    width: 60%;
+  }
 `;
 
-// FIXME: Font not rendered correctly on Chrome
 const MainHeading = styled.h1`
   font-size: 1rem;
   font-family: "Barlow Condensed", sans-serif;
@@ -29,6 +37,12 @@ const MainHeading = styled.h1`
   color: ${(props) => props.theme.colors.main};
   text-transform: uppercase;
   opacity: 0.8;
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+    letter-spacing: 3.38px;
+    line-height: 24px;
+  }
 `;
 
 const BigSpace = styled.span`
@@ -38,6 +52,11 @@ const BigSpace = styled.span`
   line-height: 6.25rem;
   margin-top: 1rem;
   opacity: 1;
+
+  @media (min-width: 768px) {
+    font-size: 9.375rem;
+    line-height: 9.375rem;
+  }
 `;
 
 const Paragraph = styled.p`
