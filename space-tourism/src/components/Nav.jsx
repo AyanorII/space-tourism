@@ -51,7 +51,7 @@ function Nav(props) {
   return (
     <StyledNav isMenuOpen={props.isMenuOpen}>
       {pages.map((page, index) => (
-        <NavLink key={index} page={page} index={index}>
+        <NavLink key={index} page={page} index={index} onClick={props.closeMenu}>
           {page}
         </NavLink>
       ))}

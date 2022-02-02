@@ -47,7 +47,7 @@ const StyledNavLink = styled(Link)`
 
 function NavLink(props) {
   return (
-    <StyledNavLink to={props.page} index={props.index}>
+    <StyledNavLink to={props.page} index={props.index} onClick={props.onClick}>
       {props.children}
     </StyledNavLink>
   );

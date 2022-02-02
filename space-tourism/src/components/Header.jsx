@@ -33,11 +33,15 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  }
+
   return (
     <StyledHeader>
       <Logo />
       <HamburgerButton isMenuOpen={isMenuOpen} onClick={handleMenuClick} />
-      <Nav isMenuOpen={isMenuOpen} />
+      <Nav isMenuOpen={isMenuOpen} closeMenu={closeMenu}/>
     </StyledHeader>
   );
 }
