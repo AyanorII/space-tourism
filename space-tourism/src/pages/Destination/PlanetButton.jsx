@@ -5,6 +5,14 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+
+  @media (min-width: 768px) {
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 1440px) {
+    align-self: end;
+  }
 `;
 
 const Button = styled.button`
@@ -19,6 +27,11 @@ const Button = styled.button`
   font-weight: bold;
   letter-spacing: 2.36px;
   position: relative;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
 
   &::after {
     content: "";

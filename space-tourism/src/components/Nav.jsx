@@ -28,6 +28,7 @@ const StyledNav = styled.nav`
     column-gap: 1rem;
     padding: 0;
     width: 65%;
+    position: absolute;
   }
 
   @media (min-width: 1440px) {
@@ -47,6 +48,8 @@ const StyledNav = styled.nav`
 
 const pages = ["home", "destination", "crew", "technology"];
 
+// TODO: Close navbar when clicked away.
+// TODO: Close navbar when swipe right on mobile.
 function Nav(props) {
   return (
     <StyledNav isMenuOpen={props.isMenuOpen}>

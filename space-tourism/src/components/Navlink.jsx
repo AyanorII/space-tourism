@@ -29,17 +29,25 @@ const StyledNavLink = styled(Link)`
     }
   }
 
+
   @media (min-width: 768px) {
     left: 0;
     text-align: center;
+    padding-block: 2.5rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 4px;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      transition: all 0.5s;
+    }
 
     &.active::after {
-      content: "";
-      positioN: absolute;
-      height: 4px;
-      width: 100%;
       background-color: #fff;
-      bottom: -39px;
+      width: 100%;
       left: 0;
     }
   }

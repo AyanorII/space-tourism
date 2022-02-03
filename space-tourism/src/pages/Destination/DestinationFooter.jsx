@@ -4,6 +4,15 @@ import styled from "styled-components";
 const Footer = styled.div`
   display: grid;
   gap: 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+
+  @media (min-width: 1440px) {
+    align-self: start;
+  }
 `;
 
 const Container = styled.div`

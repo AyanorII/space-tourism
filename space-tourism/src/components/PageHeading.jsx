@@ -8,6 +8,16 @@ const Heading = styled.h2`
   letter-spacing: 2.7px;
   position: relative;
 
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+    justify-self: start;
+  }
+
+  @media (min-width: 1440px) {
+    grid-column: 1 / 3;
+    align-self: end;
+  }
+
   &::before {
     content: "0${props => props.index}";
     position: absolute;

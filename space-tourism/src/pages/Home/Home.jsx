@@ -50,7 +50,7 @@ const MainHeading = styled.h1`
     line-height: 24px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1940px) {
     font-size: 1.75rem;
     letter-spacing: 4.72px;
     line-height: 33px;
@@ -70,7 +70,7 @@ const BigSpace = styled.span`
     line-height: 9.375rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1940px) {
     line-height: 10.75rem;
   }
 `;
@@ -86,6 +86,10 @@ const Paragraph = styled.p`
   opacity: 0.8;
 
   @media (min-width: 1440px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 1940px) {
     font-size: 1.125rem;
     line-height: 2rem;
   }

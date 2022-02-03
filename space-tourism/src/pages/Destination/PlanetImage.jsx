@@ -3,7 +3,17 @@ import styled from 'styled-components';
 
 const Image = styled.img`
   width: 170px;
-  height: 170px;
+
+  @media (min-width: 768px) {
+    width: 300px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 445px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+    justify-self: center;
+  }
 `;
 
 // FIXME: Find a better way to handle the planet images.

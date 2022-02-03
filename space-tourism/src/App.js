@@ -12,7 +12,6 @@ import Theme from "./styles/Theme";
 import Header from "./components/Header";
 import Destination from "./pages/Destination/Destination";
 
-// FIXME: Redirect to home without reloading the page.
 function App() {
   return (
     <Theme>

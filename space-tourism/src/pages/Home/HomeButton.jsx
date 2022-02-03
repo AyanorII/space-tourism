@@ -34,8 +34,7 @@ const Button = styled(NavLink)`
     align-self: end;
     position: relative;
     padding: 17% 12%;
-    bottom: 150px;
-    left: 90px
+    bottom: 120px;
   }
 `;
 

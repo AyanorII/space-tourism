@@ -20,7 +20,7 @@ const StyledHeader = styled.header`
   }
 
   @media (min-width: 1440px) {
-    padding-inline: 3.4375rem 0;
+    padding-inline: 5% 0;
     padding-bottom: 0;
     top: 10px;
   }
