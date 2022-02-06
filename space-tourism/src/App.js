@@ -6,11 +6,13 @@ import {
   Route,
   Navigate
 } from "react-router-dom";
+
 // Components:
 import Home from "./pages/Home/Home";
 import Theme from "./styles/Theme";
 import Header from "./components/Header";
 import Destination from "./pages/Destination/Destination";
+import CrewPage from "./pages/Crew/CrewPage";
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/destination" element={<Destination />} />
+          <Route path="/crew" element={<CrewPage />} />
         </Routes>
       </Router>
     </Theme>

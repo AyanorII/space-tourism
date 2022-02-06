@@ -5,8 +5,11 @@ const Heading = styled.h2`
   text-transform: uppercase;
   font-size: 1rem;
   font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
   letter-spacing: 2.7px;
   position: relative;
+  left: 10px;
+  order: 0;
 
   @media (min-width: 768px) {
     font-size: 1.25rem;

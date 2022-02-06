@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import NavLink from "./Navlink";
 
+// NOTE:
+// TODO:
 // FIXME: Find a way to make backdrop-filter work on Firefox.
 const StyledNav = styled.nav`
   position: fixed;
