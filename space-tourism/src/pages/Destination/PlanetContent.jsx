@@ -15,6 +15,7 @@ const Container = styled.div`
 
   @media (min-width: 1440px) {
     text-align: left;
+    height: 100%;
   }
 `;
 

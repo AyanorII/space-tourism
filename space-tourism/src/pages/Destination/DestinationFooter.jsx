@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 const Footer = styled.div`
   display: grid;
-  gap: 2rem;
+  /* gap: 2rem; */
+  width: 100%;
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
@@ -13,14 +14,21 @@ const Footer = styled.div`
   @media (min-width: 1440px) {
     align-self: start;
   }
+
+  @media (min-width: 1920px) {
+    gap: 0;
+  }
 `;
 
 const Container = styled.div`
-  place-items: center;
   text-transform: uppercase;
   text-align: center;
   display: grid;
   gap: 0.5rem;
+
+  @media (min-width: 1440px) {
+    text-align: left;
+  }
 `;
 
 const Info = styled.p`

@@ -29,11 +29,11 @@ const DestinationPage = styled(Page)`
   }
 
   @media (min-width: 1440px) {
-    padding-top: 7.5rem;
+    padding-top: 9rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 0.75fr 1.5fr 1fr;
+    grid-template-rows: 50px 0.75fr 300px 1fr;
     column-gap: 15%;
-    row-gap: 0;
+    row-gap: 2rem;
     padding-inline: 15%;
     justify-items: start;
     height: 100vh;
