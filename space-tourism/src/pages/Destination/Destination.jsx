@@ -18,25 +18,13 @@ const background = {
 };
 
 const DestinationPage = styled(Page)`
-  padding-top: 5.5rem;
-  row-gap: 2rem;
   padding-bottom: 3.625rem;
-  height: 100%;
-
-  @media (min-width: 768px) {
-    padding-top: 9rem;
-    padding-inline: 10%;
-  }
 
   @media (min-width: 1440px) {
-    padding-top: 9rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 0.75fr 300px 1fr;
     column-gap: 15%;
-    row-gap: 2rem;
-    padding-inline: 15%;
     justify-items: start;
-    height: 100vh;
   }
 `;
 

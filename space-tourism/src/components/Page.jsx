@@ -8,14 +8,19 @@ const StyledPage = styled.div`
   height: 100vh;
   display: grid;
   place-items: center;
+  padding-top: 5.5rem;
+  row-gap: 2rem;
 
   @media (min-width: 768px) {
     background-image: url(${(props) => props.background.tablet});
+    padding-inline: 10%;
+    padding-top: 9rem;
   }
 
   @media (min-width: 1440px) {
     background-image: url(${(props) => props.background.desktop});
     padding-inline: 15%;
+    padding-top: 9rem;
   }
 `;
 

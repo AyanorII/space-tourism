@@ -18,22 +18,15 @@ const background = {
 };
 
 const StyledCrewPage = styled(Page)`
-  padding-top: 5.5rem;
   grid-template-rows: auto 0.5fr auto 0.5fr;
-  row-gap: 2rem;
 
   @media (min-width: 768px) {
-    padding: 9rem 10% 0;
-    height: 100%;
     grid-template-rows: auto 208px auto 532px;
   }
 
   @media (min-width: 1440px) {
-    grid-template-rows: 50px 50% auto;
+    grid-template-rows: 50px 0.75fr auto;
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
-    padding-inline: 15%;
-    padding-top: 7.5rem;
     justify-items: start;
     /* padding-bottom: 100px; */
 
@@ -41,14 +34,18 @@ const StyledCrewPage = styled(Page)`
       grid-column: 1 / 2;
     }
   }
-`
+
+  @media (min-width: 1575px) {
+    grid-template-rows: 50px 50% auto;
+  }
+`;
 
 function CrewPage() {
   const [crew, setCrew] = useState(data.crew[0]);
 
   const changeCrew = (index) => {
     setCrew(data.crew[index]);
-  }
+  };
 
   return (
     <StyledCrewPage background={background}>
@@ -66,7 +63,7 @@ function CrewPage() {
           />
         ))}
       </CrewButtons>
-      <CrewInfo role={crew.role} name={crew.name} bio={crew.bio}/>
+      <CrewInfo role={crew.role} name={crew.name} bio={crew.bio} />
     </StyledCrewPage>
   );
 }
