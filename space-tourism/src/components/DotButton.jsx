@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -16,15 +16,9 @@ const Button = styled.button`
   }
 `;
 
-// FIXME: Change button color to right crew member.
-function DotButton({ person, selectedCrew, index, changeCrew, active }) {
-  const [className, setClassName] = useState(
-    active ? "active" : ""
-  );
-
+function DotButton({ index, changeCrew, className }) {
   const handleClick = () => {
     changeCrew(index);
-    setClassName(person === selectedCrew ? "active" : "");
   };
 
   return <Button className={className} onClick={handleClick} />;

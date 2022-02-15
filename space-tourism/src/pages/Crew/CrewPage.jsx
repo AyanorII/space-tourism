@@ -28,7 +28,6 @@ const StyledCrewPage = styled(Page)`
     grid-template-rows: 50px 0.75fr auto;
     grid-template-columns: 1fr 1fr;
     justify-items: start;
-    /* padding-bottom: 100px; */
 
     h2 {
       grid-column: 1 / 2;
@@ -55,11 +54,9 @@ function CrewPage() {
         {data.crew.map((person, index) => (
           <DotButton
             key={index}
-            person={person}
-            selectedCrew={crew}
             changeCrew={changeCrew}
             index={index}
-            active={person === crew}
+            className={person === crew ? "active" : ""}
           />
         ))}
       </CrewButtons>
