@@ -15,6 +15,7 @@ const background = {
 const Homepage = styled(Page)`
   @media (min-width: 1440px) {
     grid-template-columns: 1fr 1fr;
+    column-gap: 10%;
   }
 `;
 
@@ -28,9 +29,10 @@ const Content = styled.div`
   }
 
   @media (min-width: 1440px) {
+    width: 100%;
     align-self: center;
     position: relative;
-    top: 150px;
+    top: 100px;
     text-align: left;
   }
 `;

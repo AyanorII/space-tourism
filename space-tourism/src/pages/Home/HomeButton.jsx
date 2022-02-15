@@ -26,15 +26,20 @@ const Button = styled(NavLink)`
     transition: box-shadow 0.3s;
 
     &:hover {
-      box-shadow: 0px 0 0 50px rgba(217, 217, 217, 0.10);
+      box-shadow: 0px 0 0 80px rgba(217, 217, 217, 0.10);
     }
   }
 
   @media (min-width: 1440px) {
     align-self: end;
     position: relative;
-    padding: 17% 12%;
+    padding: 9rem 6rem;
     bottom: 120px;
+  }
+
+  @media (min-width: 1920px) {
+    bottom: 180px;
+    padding: 10rem 8rem;
   }
 `;
 
