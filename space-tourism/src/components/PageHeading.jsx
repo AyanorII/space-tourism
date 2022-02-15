@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Heading = styled.h2`
   text-transform: uppercase;
@@ -26,7 +26,7 @@ const Heading = styled.h2`
   }
 
   &::before {
-    content: "0${props => props.index}";
+    content: "0${(props) => props.index}";
     position: absolute;
     left: -28px;
     top: 0;
@@ -39,8 +39,12 @@ const Heading = styled.h2`
   }
 `;
 
-function PageHeading({index, children}) {
-  return <Heading index={index}>{children}</Heading>;
+function PageHeading(props) {
+  return (
+    <Heading className={props.className} index={props.index}>
+      {props.children}
+    </Heading>
+  );
 }
 
 export default PageHeading;

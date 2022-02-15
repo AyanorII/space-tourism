@@ -11,6 +11,10 @@ const Button = styled.button`
   transition: all 0.35s ease;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.75;
+  }
+
   &.active {
     opacity: 1;
   }

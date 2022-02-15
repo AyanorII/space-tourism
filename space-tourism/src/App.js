@@ -13,6 +13,7 @@ import Theme from "./styles/Theme";
 import Header from "./components/Header";
 import Destination from "./pages/Destination/Destination";
 import CrewPage from "./pages/Crew/CrewPage";
+import TechnologyPage from "./pages/Technology/TechnologyPage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/destination" element={<Destination />} />
           <Route path="/crew" element={<CrewPage />} />
+          <Route path="/technology" element={<TechnologyPage />} />
         </Routes>
       </Router>
     </Theme>
