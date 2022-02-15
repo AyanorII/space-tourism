@@ -15,6 +15,7 @@ const StyledPage = styled.div`
 
   @media (min-width: 1440px) {
     background-image: url(${(props) => props.background.desktop});
+    padding-inline: 15%;
   }
 `;
 

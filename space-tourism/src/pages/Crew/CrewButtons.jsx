@@ -10,6 +10,10 @@ const Container = styled.div`
   @media (min-width: 768px) {
     order: 2;
   }
+
+  @media (min-width: 1440px) {
+    align-self: start;
+  }
 `
 
 function CrewButtons(props) {

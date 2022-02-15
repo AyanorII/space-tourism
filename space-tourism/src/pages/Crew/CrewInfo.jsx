@@ -6,6 +6,12 @@ const Container = styled.div`
   width: 90%;
   align-self: start;
   order: 1;
+
+  @media (min-width: 1440px) {
+    text-align: left;
+    align-self: center;
+    align-self: end;
+  }
 `;
 
 const Role = styled.h4`
@@ -22,6 +28,11 @@ const Role = styled.h4`
     font-size: 1.5rem;
     line-height: 26px;
   }
+
+  @media (min-width: 1440px) {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 const Name = styled.h3`
@@ -36,6 +47,11 @@ const Name = styled.h3`
     font-size: 40px;
     line-height: 46px;
   }
+
+  @media (min-width: 1440px) {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
 `;
 
 const Bio = styled.p`
@@ -49,6 +65,10 @@ const Bio = styled.p`
   @media (min-width: 768px) {
     font-size: 1rem;
     line-height: 28px;
+  }
+
+  @media (min-width: 1440px) {
+    line-height: 2rem;
   }
 `;
 

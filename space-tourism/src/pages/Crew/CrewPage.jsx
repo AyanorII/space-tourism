@@ -27,6 +27,20 @@ const StyledCrewPage = styled(Page)`
     height: 100%;
     grid-template-rows: auto 208px auto 532px;
   }
+
+  @media (min-width: 1440px) {
+    grid-template-rows: 50px 50% auto;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    padding-inline: 15%;
+    padding-top: 7.5rem;
+    justify-items: start;
+    /* padding-bottom: 100px; */
+
+    h2 {
+      grid-column: 1 / 2;
+    }
+  }
 `
 
 function CrewPage() {

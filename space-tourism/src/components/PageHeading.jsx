@@ -14,11 +14,15 @@ const Heading = styled.h2`
   @media (min-width: 768px) {
     font-size: 1.25rem;
     justify-self: start;
+    left: 2rem;
   }
 
   @media (min-width: 1440px) {
     grid-column: 1 / 3;
     align-self: end;
+    font-size: 1.75rem;
+    letter-spacing: 4.7px;
+    left: 2.5rem;
   }
 
   &::before {
@@ -28,6 +32,10 @@ const Heading = styled.h2`
     top: 0;
     opacity: 0.25;
     color: white;
+
+    @media (min-width: 1440px) {
+      left: -40px;
+    }
   }
 `;
 
