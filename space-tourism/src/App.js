@@ -1,7 +1,7 @@
 // Dependencies:
 import GlobalStyle from "./styles/globalStyles";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Routes,
   Route,
   Navigate
@@ -19,7 +19,7 @@ function App() {
   return (
     <Theme>
       <GlobalStyle />
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Header />
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
