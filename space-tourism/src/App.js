@@ -23,6 +23,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/space-tourism" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/destination" element={<Destination />} />
           <Route path="/crew" element={<CrewPage />} />

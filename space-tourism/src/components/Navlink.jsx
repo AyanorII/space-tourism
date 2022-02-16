@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
+import ClickAwayListener from "react-click-away-listener";
 
 // FIXME: Make white bar be the exact same width as the text
 const StyledNavLink = styled(Link)`
@@ -29,7 +30,6 @@ const StyledNavLink = styled(Link)`
     }
   }
 
-
   @media (min-width: 768px) {
     left: 0;
     text-align: center;
@@ -55,7 +55,11 @@ const StyledNavLink = styled(Link)`
 
 function NavLink(props) {
   return (
-    <StyledNavLink to={props.page} index={props.index} onClick={props.onClick}>
+    <StyledNavLink
+      to={props.page}
+      index={props.index}
+      onClick={props.onClick}
+    >
       {props.children}
     </StyledNavLink>
   );

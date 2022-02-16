@@ -40,7 +40,7 @@ const StyledNav = styled.nav`
       content: "";
       width: 60%;
       height: 3px;
-      background: #FFFFFF20;
+      background: #ffffff20;
       position: absolute;
       left: -55%;
     }
@@ -55,7 +55,12 @@ function Nav(props) {
   return (
     <StyledNav isMenuOpen={props.isMenuOpen}>
       {pages.map((page, index) => (
-        <NavLink key={index} page={page} index={index} onClick={props.closeMenu}>
+        <NavLink
+          key={index}
+          page={page}
+          index={index}
+          onClick={props.closeMenu}
+        >
           {page}
         </NavLink>
       ))}
