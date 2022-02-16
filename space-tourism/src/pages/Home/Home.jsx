@@ -13,6 +13,8 @@ const background = {
 }
 
 const Homepage = styled(Page)`
+  height: 100vh;
+
   @media (min-width: 1440px) {
     grid-template-columns: 1fr 1fr;
     column-gap: 10%;
@@ -23,10 +25,6 @@ const Content = styled.div`
   text-align: center;
   width: 85%;
   align-self: end;
-
-  @media (min-width: 768px) {
-    width: 60%;
-  }
 
   @media (min-width: 1440px) {
     width: 100%;
