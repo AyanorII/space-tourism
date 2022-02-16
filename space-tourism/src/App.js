@@ -1,7 +1,7 @@
 // Dependencies:
 import GlobalStyle from "./styles/globalStyles";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   Navigate
