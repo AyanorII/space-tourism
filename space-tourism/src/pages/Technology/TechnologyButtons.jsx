@@ -6,7 +6,10 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  /* margin-top: 2.125rem; */
+
+  @media (min-width: 1440px) {
+    flex-direction: column;
+  }
 `;
 
 function TechnologyButtons(props) {

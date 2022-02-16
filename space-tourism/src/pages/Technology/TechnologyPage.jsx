@@ -26,12 +26,25 @@ const StyledPage = styled(Page)`
     row-gap: 3.75rem;
     padding-bottom: 6.0625rem;
   }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: 0.2fr 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+    padding-left: 15%;
+    align-items: center;
+    justify-items: start;
+  }
 `;
 
 const StyledPageHeading = styled(PageHeading)`
 
   @media (min-width: 768px) {
     margin-left: 10%;
+  }
+
+  @media (min-width: 1440px) {
+    grid-column: 1 / -1;
+    margin-left: 0;
   }
 `;
 

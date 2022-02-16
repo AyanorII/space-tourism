@@ -19,23 +19,27 @@ const background = {
 
 const StyledCrewPage = styled(Page)`
   grid-template-rows: auto 0.5fr auto 0.5fr;
+  padding-bottom: 20%;
+  /* height: 100vh; */
 
   @media (min-width: 768px) {
-    grid-template-rows: auto 208px auto 532px;
+    grid-template-rows: auto 208px auto 1fr;
   }
 
   @media (min-width: 1440px) {
-    grid-template-rows: 50px 0.75fr auto;
+    grid-template-rows: 50px 50% auto;
     grid-template-columns: 1fr 1fr;
     justify-items: start;
+    padding-bottom: 0;
+    padding-right: 10%;
 
     h2 {
       grid-column: 1 / 2;
     }
   }
 
-  @media (min-width: 1575px) {
-    grid-template-rows: 50px 50% auto;
+  @media (min-width: 1920px) {
+    padding-right: 15%;
   }
 `;
 

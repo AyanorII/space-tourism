@@ -5,6 +5,15 @@ const Container = styled.div`
   text-align: center;
   color: ${props => props.theme.colors.main};
   width: 85%;
+
+  @media (min-width: 768px) {
+    padding-inline: 10%;
+  }
+
+  @media (min-width: 1440px) {
+    text-align: left;
+    padding: 0;
+  }
 `;
 
 const Terminology = styled.span`
@@ -35,6 +44,11 @@ const Title = styled.h1`
     font-size: 2.5rem;
     line-height: 2.875rem;
   }
+
+  @media (min-width: 1440px) {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
 `;
 
 const Description = styled.p`
@@ -47,6 +61,11 @@ const Description = styled.p`
   @media (min-width: 768px) {
     font-size: 1rem;
     line-height: 1.75rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+    line-height: 2rem;
   }
 `;
 

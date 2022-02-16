@@ -21,11 +21,13 @@ const Container = styled.div`
 `;
 
 const StyleImage = styled.img`
-  max-width: 190px;
+  /* max-width: 190px; */
+  max-width: 75%;
 
   @media (min-width: 768px) {
     max-width: 100%;
-    max-height: 532px;
+    /* max-height: 532px; */
+    max-height: 100%;
   }
 
   @media (min-width: 1440px) {
