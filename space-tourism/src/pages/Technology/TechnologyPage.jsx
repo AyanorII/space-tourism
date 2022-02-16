@@ -20,6 +20,7 @@ const StyledPage = styled(Page)`
   align-items: start;
   grid-template-rows: auto auto auto 1fr;
   row-gap: 2rem;
+  height: 100vh;
 
   @media (min-width: 768px) {
     padding-inline: 0;

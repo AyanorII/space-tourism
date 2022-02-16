@@ -32,7 +32,7 @@ const Content = styled.div`
     width: 100%;
     align-self: center;
     position: relative;
-    top: 100px;
+    top: 50px;
     text-align: left;
   }
 `;
