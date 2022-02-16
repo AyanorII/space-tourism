@@ -5,7 +5,6 @@ const StyledPage = styled.div`
   background-image: url(${(props) => props.background.mobile});
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
   display: grid;
   place-items: center;
   padding-top: 5.5rem;
@@ -21,6 +20,7 @@ const StyledPage = styled.div`
     background-image: url(${(props) => props.background.desktop});
     padding-inline: 15%;
     padding-top: 9rem;
+    height: 100vh;
   }
 `;
 

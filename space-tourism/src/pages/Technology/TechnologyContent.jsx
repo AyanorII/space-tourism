@@ -13,7 +13,13 @@ const Terminology = styled.span`
   text-transform: uppercase;
   letter-spacing: 2.4px;
   line-height: 1rem;
-`;
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 2.7px;
+  }
+  `;
 
 const Title = styled.h1`
   font-family: "Bellefair", sans-serif;
@@ -23,6 +29,12 @@ const Title = styled.h1`
   color: #FFF;
   font-weight: 400;
   margin-block: 0.5625rem 1rem;
+
+  @media (min-width: 768px) {
+    margin-top: 1.25rem;
+    font-size: 2.5rem;
+    line-height: 2.875rem;
+  }
 `;
 
 const Description = styled.p`
@@ -31,6 +43,11 @@ const Description = styled.p`
   line-height: 1.5rem;
   color: ${props => props.theme.colors.main};
   letter-spacing: 1px;
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
 `;
 
 function TechnologyContent(props) {

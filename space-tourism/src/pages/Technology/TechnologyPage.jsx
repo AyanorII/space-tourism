@@ -23,11 +23,16 @@ const StyledPage = styled(Page)`
 
   @media (min-width: 768px) {
     padding-inline: 0;
+    row-gap: 3.75rem;
+    padding-bottom: 6.0625rem;
   }
 `;
 
 const StyledPageHeading = styled(PageHeading)`
-  margin-left: 10%;
+
+  @media (min-width: 768px) {
+    margin-left: 10%;
+  }
 `;
 
 function TechnologyPage() {

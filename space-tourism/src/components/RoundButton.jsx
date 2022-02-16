@@ -22,6 +22,11 @@ const Button = styled.button`
     background-color: #ffffff;
     color: #000;
   }
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
 `;
 
 function RoundButton(props) {
