@@ -19,7 +19,7 @@ function App() {
   return (
     <Theme>
       <GlobalStyle />
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <Header />
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
