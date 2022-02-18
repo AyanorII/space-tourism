@@ -16,8 +16,6 @@ const Image = styled.img`
   }
 `;
 
-// FIXME: Find a better way to handle the planet images.
-// TODO: Add animation to the planet images.
 function PlanetImage(props) {
   const name = props.name.toLowerCase();
   return (

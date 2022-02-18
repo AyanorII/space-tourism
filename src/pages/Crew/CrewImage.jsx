@@ -35,7 +35,6 @@ const StyleImage = styled.img`
   }
 `;
 
-// FIXME: Find a better way to handle the crew images.
 function CrewImage(props) {
   const formattedName = props.name.replace(/\s+/g, "-").toLowerCase();
   return (

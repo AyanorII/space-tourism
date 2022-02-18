@@ -9,7 +9,7 @@ const StyledPage = styled.div`
   place-items: center;
   padding-top: 5.5rem;
   row-gap: 2rem;
-  /* height: 100%; */
+  min-height: 100vh;
 
   @media (min-width: 768px) {
     background-image: url(${(props) => props.background.tablet});
@@ -21,7 +21,6 @@ const StyledPage = styled.div`
     background-image: url(${(props) => props.background.desktop});
     padding-inline: 15%;
     padding-top: 9rem;
-    height: 100vh;
   }
 `;
 

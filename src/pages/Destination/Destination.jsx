@@ -20,10 +20,6 @@ const background = {
 const DestinationPage = styled(Page)`
   padding-bottom: 3.625rem;
 
-  @media (min-width: 768px) {
-    height: 100vh;
-  }
-
   @media (min-width: 1440px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 0.75fr 300px 1fr;

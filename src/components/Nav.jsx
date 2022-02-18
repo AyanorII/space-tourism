@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import NavLink from "./Navlink";
 
-// FIXME: Find a way to make backdrop-filter work on Firefox.
-// FIXME: Improve visibility of backdrop-filter;
+
 const StyledNav = styled.nav`
   position: fixed;
   width: 65%;
@@ -49,8 +48,6 @@ const StyledNav = styled.nav`
 
 const pages = ["home", "destination", "crew", "technology"];
 
-// TODO: Close navbar when clicked away.
-// TODO: Close navbar when swipe right on mobile.
 function Nav(props) {
   return (
     <StyledNav isMenuOpen={props.isMenuOpen}>

@@ -1,9 +1,7 @@
 import React from "react";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
-import ClickAwayListener from "react-click-away-listener";
 
-// FIXME: Make white bar be the exact same width as the text
 const StyledNavLink = styled(Link)`
   color: ${(props) => props.theme.colors.white};
   letter-spacing: 2.7px;
