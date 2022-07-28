@@ -20,4 +20,22 @@ const StyledHeader = styled.header`
   align-items: center;
   padding: 1.5rem;
   position: relative;
+
+  @media (min-width: 768px) {
+    padding-block: 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 2.5rem 3.4375rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 10rem;
+      height: 1px;
+      width: 32%;
+      background-color: ${props => props.theme.color.light}20;
+    }
+  }
 `;
