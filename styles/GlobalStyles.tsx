@@ -18,10 +18,15 @@ const GlobalStyles = createGlobalStyle`
     color: ${LIGHT_COLOR};
     background-color: ${DARK_COLOR};
     min-height: 100vh;
+
+    & #__next {
+      min-height: 100vh;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Bellefair', cursive;
+    font-weight: 400;
   }
 
   button {

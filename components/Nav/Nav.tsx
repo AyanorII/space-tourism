@@ -70,7 +70,7 @@ const NavContainer = styled.div<Props>`
   bottom: 0;
   min-height: 100vh;
   padding: 7.375rem 0 7.375rem 2rem;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(30px);
   transition: all 0.35s;
   transform: ${(props) => (props.open ? "translateX(0)" : "translateX(100%)")};
 

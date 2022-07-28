@@ -1,7 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import Logo from './Logo'
-import Nav from './Nav/Nav'
+import styled from "styled-components";
+import Logo from "./Logo";
+import Nav from "./Nav/Nav";
 
 const Header = () => {
   return (
@@ -9,10 +8,10 @@ const Header = () => {
       <Logo />
       <Nav />
     </StyledHeader>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
 
 const StyledHeader = styled.header`
   display: flex;
@@ -20,6 +19,7 @@ const StyledHeader = styled.header`
   align-items: center;
   padding: 1.5rem;
   position: relative;
+  margin-bottom: 3rem;
 
   @media (min-width: 768px) {
     padding-block: 0;
@@ -35,7 +35,7 @@ const StyledHeader = styled.header`
       left: 10rem;
       height: 1px;
       width: 32%;
-      background-color: ${props => props.theme.color.light}20;
+      background-color: ${(props) => props.theme.color.light}20;
     }
   }
 `;
