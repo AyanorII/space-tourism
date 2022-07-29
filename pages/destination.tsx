@@ -70,8 +70,9 @@ const Content = styled.div`
   }
 
   @media (min-width: 1200px) {
-    margin-top: 4rem;
+    margin-top: 2rem;
     flex-direction: row;
+    gap: 5rem;
   }
 `;
 
@@ -83,5 +84,6 @@ const Tabs = styled.div`
 
   @media (min-width: 1200px) {
     justify-content: flex-start;
+    margin-bottom: 2rem;
   }
 `;

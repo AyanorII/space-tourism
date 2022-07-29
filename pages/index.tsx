@@ -64,6 +64,7 @@ const Hero = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-top: 3rem;
 
   @media (min-width: 1200px) {
     flex-direction: row;

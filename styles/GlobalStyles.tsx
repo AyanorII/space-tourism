@@ -18,9 +18,14 @@ const GlobalStyles = createGlobalStyle`
     color: ${LIGHT_COLOR};
     background-color: ${DARK_COLOR};
     min-height: 100vh;
+  }
 
-    & #__next {
-      min-height: 100vh;
+  #__next {
+    min-height: 100vh;
+
+    @media (min-width: 1200px) {
+      max-height: 100vh;
+      overflow: hidden;
     }
   }
 
