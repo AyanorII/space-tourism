@@ -19,11 +19,16 @@ const StyledTitle = styled(Paragraph)<Props>`
   text-transform: uppercase;
   font-family: "Barlow Condensed", sans-serif;
   letter-spacing: 2.7px;
+  text-align: center;
 
   &::before {
     content: "${props => "0" + props.number}";
     opacity: 0.5;
     font-weight: 500;
     margin-right: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    text-align: left;
   }
 `;

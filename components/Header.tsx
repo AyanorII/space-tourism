@@ -19,7 +19,6 @@ const StyledHeader = styled.header`
   align-items: center;
   padding: 1.5rem;
   position: relative;
-  margin-bottom: 3rem;
 
   @media (min-width: 768px) {
     padding-block: 0;

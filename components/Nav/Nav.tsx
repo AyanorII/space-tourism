@@ -104,7 +104,4 @@ const NavListItem = styled.li`
   letter-spacing: 2.7px;
   padding-block: 0.5rem;
 
-  @media (min-width: 1200px) {
-    padding-block: 2.5rem;
-  }
 `;
