@@ -6,14 +6,16 @@ type Props = {
   textTransform?: "uppercase" | "lowercase" | "capitalize" | "none";
   letterSpacing?: string;
   className?: string;
+  as?: React.ElementType;
 };
 
-const Paragraph = ({ children, textTransform, letterSpacing, className }: Props) => {
+const Paragraph = ({ children, textTransform, letterSpacing, className, as }: Props) => {
   return (
     <StyledParagraph
       textTransform={textTransform || "none"}
       letterSpacing={letterSpacing || "1.4px"}
       className={className || ""}
+      as={as || "p"}
     >
       {children}
     </StyledParagraph>

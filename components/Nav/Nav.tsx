@@ -1,10 +1,10 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import styled from "styled-components";
 import { useMediaQuery } from "../../lib/hooks";
 import { Link as LinkInterface } from "../../lib/types";
 import NavButton from "./NavButton";
+import NavLink from "./NavLink";
 
 export const LINKS: LinkInterface[] = [
   {
@@ -47,8 +47,10 @@ const Nav = () => {
       <NavContainer open={open}>
         <NavList>
           {LINKS.map(({ name, href }, index) => (
-            <NavListItem key={href} index={index} className={isActive(href)}>
-              <Link href={href}>{name}</Link>
+            <NavListItem key={href} className={isActive(href)}>
+              <NavLink href={href} className={isActive(href)}>
+                {name}
+              </NavLink>
             </NavListItem>
           ))}
         </NavList>
@@ -73,6 +75,7 @@ const NavContainer = styled.div<Props>`
   backdrop-filter: blur(30px);
   transition: all 0.35s;
   transform: ${(props) => (props.open ? "translateX(0)" : "translateX(100%)")};
+  z-index: 10;
 
   @media (min-width: 768px) {
     position: relative;
@@ -87,7 +90,7 @@ const NavList = styled.ol`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  counter-reset: links;
+  counter-set: links -1;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -95,67 +98,13 @@ const NavList = styled.ol`
   }
 `;
 
-type NavListItemType = {
-  index: number;
-};
-
-const NavListItem = styled.li<NavListItemType>`
+const NavListItem = styled.li`
   text-transform: uppercase;
   list-style: none;
   letter-spacing: 2.7px;
   padding-block: 0.5rem;
-  padding-right: 4rem;
-  position: relative;
-
-  &::before {
-    content: "0" counter(links);
-    counter-increment: links;
-    margin-right: 0.75rem;
-    font-weight: 700;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
-    height: 0;
-    width: 4px;
-    background-color: ${(props) => props.theme.color.light};
-    transition: all 0.35s;
-  }
-
-  &.active:after {
-    top: 0;
-    height: 100%;
-  }
-
-  @media (min-width: 768px) {
-    padding-right: 0;
-    padding-block: 2.5rem;
-
-    &::before {
-      display: none;
-    }
-
-    &::after {
-      bottom: 0;
-      width: 0;
-      left: 50%;
-      top: 100%;
-    }
-
-    &.active:after {
-      left: 0;
-      width: 100%;
-      height: 4px;
-      top: 100%;
-    }
-  }
 
   @media (min-width: 1200px) {
-    &::before {
-      display: inline;
-    }
+    padding-block: 2.5rem;
   }
 `;
