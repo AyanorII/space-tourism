@@ -1,15 +1,29 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import styled from "styled-components";
 
 const ExploreButton = () => {
+  const variant = {
+    initial: {
+      opacity: 0,
+      scale: 0
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+    }
+  }
+
   return (
-    <Link href="/destination" passHref>
-      <StyledLinkButton>Explore</StyledLinkButton>
-    </Link>
+    <motion.div variants={variant} initial="initial" animate="animate" transition={{duration: 1, }}>
+      <Link href="/destination" passHref>
+        <StyledLinkButton>Explore</StyledLinkButton>
+      </Link>
+    </motion.div>
   );
 };
 
-export default ExploreButton
+export default ExploreButton;
 
 const StyledLinkButton = styled.a`
   background-color: ${(props) => props.theme.color.light};
@@ -25,11 +39,12 @@ const StyledLinkButton = styled.a`
   font-family: "Bellefair", cursive;
   position: relative;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: ${props => props.theme.color.light}40;
+    background-color: ${(props) => props.theme.color.light}40;
     border-radius: 50%;
     z-index: -1;
     opacity: 0;
@@ -37,16 +52,17 @@ const StyledLinkButton = styled.a`
   }
 
   &::before {
-    box-shadow: 0 0 5px 2rem ${props => props.theme.color.light}30;
+    box-shadow: 0 0 5px 2rem ${(props) => props.theme.color.light}30;
   }
 
   &::after {
-    box-shadow: 0 0 20px 4rem ${props => props.theme.color.light}30;
+    box-shadow: 0 0 20px 4rem ${(props) => props.theme.color.light}30;
     transition-delay: 0.05s;
   }
 
   &:hover {
-    &::before, &::after {
+    &::before,
+    &::after {
       opacity: 1;
     }
   }

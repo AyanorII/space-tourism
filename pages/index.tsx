@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import styled from "styled-components";
 import Container from "../components/Container";
 import ExploreButton from "../components/ExploreButton";
@@ -6,23 +7,29 @@ import Paragraph from "../components/Paragraph";
 
 const Home: NextPage = () => {
   return (
-    <Container>
-      <Hero>
-        <Content>
-          <StyledParagraph textTransform="uppercase" letterSpacing="2.7px">
-            So, you want to go to
-          </StyledParagraph>
-          <MainHeading>Space</MainHeading>
-          <Paragraph>
-            Let’s face it; if you want to go to space, you might as well
-            genuinely go to outer space and not hover kind of on the edge of it.
-            Well sit back, and relax because we’ll give you a truly out of this
-            world experience!
-          </Paragraph>
-        </Content>
-        <ExploreButton />
-      </Hero>
-    </Container>
+    <>
+      <Head>
+        <title>Space Tourism</title>
+        <meta name="description"></meta>
+      </Head>
+      <Container>
+        <Hero>
+          <Content>
+            <StyledParagraph textTransform="uppercase" letterSpacing="2.7px">
+              So, you want to go to
+            </StyledParagraph>
+            <MainHeading>Space</MainHeading>
+            <Paragraph>
+              Let’s face it; if you want to go to space, you might as well
+              genuinely go to outer space and not hover kind of on the edge of
+              it. Well sit back, and relax because we’ll give you a truly out of
+              this world experience!
+            </Paragraph>
+          </Content>
+          <ExploreButton />
+        </Hero>
+      </Container>
+    </>
   );
 };
 
@@ -32,7 +39,7 @@ const MainHeading = styled.h1`
   font-size: 5rem;
   line-height: 100px;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: uppercase;
 
   @media (min-width: 768px) {
     font-size: 9.375rem;
