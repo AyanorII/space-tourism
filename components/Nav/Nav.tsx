@@ -32,6 +32,10 @@ const Nav = () => {
     setOpen(!open);
   };
 
+  const closeNav = () => {
+    setOpen(false);
+  };
+
   const isMobile = useMediaQuery(768);
 
   const router = useRouter();
@@ -48,7 +52,11 @@ const Nav = () => {
         <NavList>
           {LINKS.map(({ name, href }, index) => (
             <NavListItem key={href} className={isActive(href)}>
-              <NavLink href={href} className={isActive(href)}>
+              <NavLink
+                href={href}
+                onClick={closeNav}
+                className={isActive(href)}
+              >
                 {name}
               </NavLink>
             </NavListItem>
@@ -86,7 +94,7 @@ const NavContainer = styled.div<Props>`
   }
 
   @media (min-width: 1200px) {
-    padding-inline: 2rem
+    padding-inline: 2rem;
   }
 `;
 
@@ -107,5 +115,4 @@ const NavListItem = styled.li`
   list-style: none;
   letter-spacing: 2.7px;
   padding-block: 0.5rem;
-
 `;

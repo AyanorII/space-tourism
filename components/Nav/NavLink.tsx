@@ -1,22 +1,25 @@
-import Link from 'next/link';
-import React from 'react'
-import styled from 'styled-components';
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
 type Props = {
   href: string;
   children: React.ReactNode;
   className?: string;
-}
+  onClick: () => void;
+};
 
-const NavLink = ({href, children, className}: Props) => {
+const NavLink = ({ href, children, className, onClick }: Props) => {
   return (
     <Link href={href} passHref>
-      <StyledLink className={className}>{children}</StyledLink>
+      <StyledLink onClick={onClick} className={className}>
+        {children}
+      </StyledLink>
     </Link>
-  )
-}
+  );
+};
 
-export default NavLink
+export default NavLink;
 
 const StyledLink = styled.a`
   position: relative;
