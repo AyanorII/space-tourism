@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Head from "next/head";
 import { useState } from "react";
 import styled from "styled-components";
 import Container from "../components/Container";
@@ -27,30 +28,35 @@ const Destination: NextPage = () => {
   const { name, images, description, travel, distance } = destination;
 
   return (
-    <Container>
-      <PageTitle number={1}>Destination</PageTitle>
-      <Content>
-        <DestinationImage src={images.png} alt={name} />
-        <div>
-          <Tabs>
-            {DESTINATIONS_DATA.map((dest, index) => {
-              return (
-                <DestinationTab
-                  key={index}
-                  className={destination === dest ? "active" : ""}
-                  onClick={() => handleTabClick(dest)}
-                >
-                  {dest.name}
-                </DestinationTab>
-              );
-            })}
-          </Tabs>
-          <DestinationName>{name}</DestinationName>
-          <Paragraph>{description}</Paragraph>
-          <DestinationStats travelTime={travel} distance={distance} />
-        </div>
-      </Content>
-    </Container>
+    <>
+      <Head>
+        <title>{name} | Destination</title>
+      </Head>
+      <Container>
+        <PageTitle number={1}>Destination</PageTitle>
+        <Content>
+          <DestinationImage src={images.png} alt={name} />
+          <div>
+            <Tabs>
+              {DESTINATIONS_DATA.map((dest, index) => {
+                return (
+                  <DestinationTab
+                    key={index}
+                    className={destination === dest ? "active" : ""}
+                    onClick={() => handleTabClick(dest)}
+                  >
+                    {dest.name}
+                  </DestinationTab>
+                );
+              })}
+            </Tabs>
+            <DestinationName>{name}</DestinationName>
+            <Paragraph>{description}</Paragraph>
+            <DestinationStats travelTime={travel} distance={distance} />
+          </div>
+        </Content>
+      </Container>
+    </>
   );
 };
 
@@ -70,7 +76,7 @@ const Content = styled.div`
   }
 
   @media (min-width: 1200px) {
-    margin-top: 2rem;
+    margin-top: 5rem;
     flex-direction: row;
     gap: 5rem;
   }

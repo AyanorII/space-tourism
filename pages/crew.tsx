@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Head from "next/head";
 import { useState } from "react";
 import styled from "styled-components";
 import Container from "../components/Container";
@@ -23,6 +24,10 @@ const CrewPage: NextPage = () => {
   const { name, images, bio, role } = crewMember;
 
   return (
+    <>
+      <Head>
+        <title>{role} | Crew</title>
+      </Head>
     <Container>
       <PageTitle number={2}>Meet your Crew</PageTitle>
       <Content>
@@ -45,6 +50,7 @@ const CrewPage: NextPage = () => {
         </CrewInfo>
       </Content>
     </Container>
+    </>
   );
 };
 
