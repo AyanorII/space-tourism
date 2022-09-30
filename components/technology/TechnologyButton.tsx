@@ -18,7 +18,7 @@ export default TechnologyButton;
 
 const StyledButton = styled.button`
   border-radius: 50%;
-  border: 1px solid #FFFFFF30;
+  border: 1px solid #ffffff30;
   width: 40px;
   height: 40px;
   background-color: ${(props) =>
@@ -41,5 +41,9 @@ const StyledButton = styled.button`
     width: 80px;
     height: 80px;
     font-size: 2rem;
+
+    &:not(.active):hover {
+      background-color: #ffffff25;
+    }
   }
 `;
