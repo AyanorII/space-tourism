@@ -84,6 +84,10 @@ const NavContainer = styled.div<Props>`
     transform: none;
     padding: 0;
   }
+
+  @media (min-width: 1200px) {
+    padding-inline: 2rem
+  }
 `;
 
 const NavList = styled.ol`

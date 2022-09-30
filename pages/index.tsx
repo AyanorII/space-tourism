@@ -69,15 +69,17 @@ const StyledParagraph = styled(Paragraph)`
 const Hero = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 7.5%;
   align-items: center;
-  margin-top: 3rem;
+  height: 100%;
+  width: 100%;
 
   @media (min-width: 1200px) {
     flex-direction: row;
+    justify-content: space-between;
   }
 `;
 
 const Content = styled.div`
-  margin-bottom: 10vh;
 `;

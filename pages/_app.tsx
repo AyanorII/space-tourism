@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import Background from "../components/Background";
 import Header from "../components/Header";
 import GlobalStyles from "../styles/GlobalStyles";
@@ -11,10 +11,19 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <Background />
       <GlobalStyles />
-      <Header />
-      <Component {...pageProps} />
+      <MainContainer>
+        <Header />
+        <Component {...pageProps} />
+      </MainContainer>
     </ThemeProvider>
   );
 }
 
 export default MyApp;
+
+const MainContainer = styled.div`
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  /* gap: 10%; */
+`;
