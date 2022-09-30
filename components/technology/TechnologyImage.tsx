@@ -10,6 +10,7 @@ type Props = {
 const TechnologyImage = ({ portraitSrc, landscapeSrc, alt }: Props) => {
   const isMobile = useMediaQuery(768);
   const isTablet = useMediaQuery(1200);
+  const isDesktop = useMediaQuery(1440);
 
   if (isMobile) {
     return (
@@ -31,7 +32,7 @@ const TechnologyImage = ({ portraitSrc, landscapeSrc, alt }: Props) => {
         layout="responsive"
       />
     );
-  } else {
+  } else if (isDesktop) {
     return (
       <Image
         src={portraitSrc}
@@ -41,6 +42,16 @@ const TechnologyImage = ({ portraitSrc, landscapeSrc, alt }: Props) => {
         layout="responsive"
       />
     );
+  } else {
+    return (
+      <Image
+        src={portraitSrc}
+        alt={alt}
+        layout="fill"
+        objectFit="contain"
+      />
+    );
+
   }
 };
 
