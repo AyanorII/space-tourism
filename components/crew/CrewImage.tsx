@@ -19,6 +19,7 @@ const CrewImage = ({ src, alt }: Props) => {
         height="240px"
         alt={alt}
         className="mobile"
+        objectFit="contain"
       />
     );
   } else if (isTablet) {
@@ -28,6 +29,7 @@ const CrewImage = ({ src, alt }: Props) => {
         width="456px"
         height="572px"
         alt={alt}
+        objectFit="contain"
         className="tablet"
       />
     );
@@ -37,6 +39,7 @@ const CrewImage = ({ src, alt }: Props) => {
         src={src}
         width="568px"
         height="712px"
+        objectFit="contain"
         alt={alt}
         className="desktop"
       />

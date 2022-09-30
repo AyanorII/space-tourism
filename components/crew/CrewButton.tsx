@@ -18,4 +18,9 @@ const StyledButton = styled.button`
   background-color: ${(props) =>
     props.className === "active" ? "#FFF" : "#FFFFFF40"};
   transition: all 0.25s;
+  padding: 0.35rem;
+
+  @media (min-width: 1200px) {
+    padding: 0.5rem;
+  }
 `;
