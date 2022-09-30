@@ -11,11 +11,17 @@ const DestinationImage = ({ src, alt }: Props) => {
   const isTablet = useMediaQuery(1024);
 
   if (isMobile) {
-    return <Image src={src} width={170} height={170} alt={alt} />;
+    return (
+      <Image src={src} width={170} height={170} alt={alt} priority={true} />
+    );
   } else if (isTablet) {
-    return <Image src={src} width={300} height={300} alt={alt} />;
+    return (
+      <Image src={src} width={300} height={300} alt={alt} priority={true} />
+    );
   } else {
-    return <Image src={src} width={445} height={445} alt={alt} />;
+    return (
+      <Image src={src} width={445} height={445} alt={alt} priority={true} />
+    );
   }
 };
 

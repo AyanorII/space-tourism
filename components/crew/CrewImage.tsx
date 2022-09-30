@@ -20,6 +20,7 @@ const CrewImage = ({ src, alt }: Props) => {
         alt={alt}
         className="mobile"
         objectFit="contain"
+        priority={true}
       />
     );
   } else if (isTablet) {
@@ -30,6 +31,7 @@ const CrewImage = ({ src, alt }: Props) => {
         height="572px"
         alt={alt}
         objectFit="contain"
+        priority={true}
         className="tablet"
       />
     );
@@ -40,6 +42,7 @@ const CrewImage = ({ src, alt }: Props) => {
         width="568px"
         height="712px"
         objectFit="contain"
+        priority={true}
         alt={alt}
         className="desktop"
       />

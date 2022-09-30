@@ -19,6 +19,7 @@ const TechnologyImage = ({ portraitSrc, landscapeSrc, alt }: Props) => {
         alt={alt}
         width="375px"
         height="170px"
+        priority={true}
         layout="responsive"
       />
     );
@@ -29,6 +30,7 @@ const TechnologyImage = ({ portraitSrc, landscapeSrc, alt }: Props) => {
         alt={alt}
         width="768px"
         height="310px"
+        priority={true}
         layout="responsive"
       />
     );
@@ -39,6 +41,7 @@ const TechnologyImage = ({ portraitSrc, landscapeSrc, alt }: Props) => {
         alt={alt}
         width="515px"
         height="527px"
+        priority={true}
         layout="responsive"
       />
     );
@@ -49,9 +52,9 @@ const TechnologyImage = ({ portraitSrc, landscapeSrc, alt }: Props) => {
         alt={alt}
         layout="fill"
         objectFit="contain"
+        priority={true}
       />
     );
-
   }
 };
 
